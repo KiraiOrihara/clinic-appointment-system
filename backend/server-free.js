@@ -33,7 +33,7 @@ app.use(session({
 app.use(helmet());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? 'https://your-production-domain.com' 
+    ? 'https://clinic-appointment-system-beta.vercel.app' 
     : ['http://localhost:5174', 'http://localhost:3000'],
   credentials: true // Allow cookies to be sent
 }));
