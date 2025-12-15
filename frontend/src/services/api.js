@@ -3,7 +3,7 @@
 
 // Allow overriding the backend URL via Vite env, fallback to local node backend (3001)
 // Normalize so devs can pass either http://host:port or http://host:port/api
-const rawBase = import.meta.env?.VITE_API_BASE_URL || 'http://localhost:3001';
+const rawBase = 'https://clinic-appointment-system-lf6l.onrender.com';
 const sanitizedBase = rawBase.replace(/\/+$/, '').replace(/\/api$/, ''); // drop trailing slash and lone /api
 const ROOT_API_URL = sanitizedBase;
 const API_BASE_URL = `${ROOT_API_URL}/api`;
