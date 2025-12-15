@@ -32,10 +32,8 @@ app.use(session({
 // Middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? 'https://clinic-appointment-system-beta.vercel.app' 
-    : ['http://localhost:5174', 'http://localhost:3000'],
-  credentials: true // Allow cookies to be sent
+  origin: ['https://clinic-appointment-system-beta.vercel.app', 'http://localhost:5174',  'http://localhost:3000'],
+  credentials: true
 }));
 app.use(morgan('combined'));
 app.use(express.json({ limit: '10mb' }));
