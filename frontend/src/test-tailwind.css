@@ -1,0 +1,4 @@
+/* Test file to verify Tailwind is working */
+.test-tailwind {
+  @apply bg-blue-600 text-white p-4 rounded-lg;
+}

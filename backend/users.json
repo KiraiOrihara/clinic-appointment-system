@@ -1,0 +1,50 @@
+[
+  {
+    "id": 3,
+    "email": "arizarhenzon322@gmail.com",
+    "password": "$2b$10$Msfc4CwIeY09TbRz3iscDOo97nKFtyZ4aq/mO1ww.EHYMllwMA6jy",
+    "first_name": "Ariza",
+    "last_name": "Rhenzon",
+    "phone": "96664887121",
+    "date_of_birth": null,
+    "role": "user",
+    "created_at": "2025-11-27T17:18:20.510Z",
+    "updated_at": "2025-11-27T17:18:20.510Z"
+  },
+  {
+    "id": 5,
+    "email": "cuerboprince13@gmail.com",
+    "password": "$2b$10$lxN8kyeuyfJsNXl1USU8dO35WBlAFDvqPEYsU1nDg3qHZBCbHZdm6",
+    "first_name": "Asta",
+    "last_name": "Yuno",
+    "phone": "96847551752",
+    "date_of_birth": null,
+    "role": "user",
+    "created_at": "2025-12-03T05:27:55.622Z",
+    "updated_at": "2025-12-03T05:27:55.622Z"
+  },
+  {
+    "id": 4,
+    "email": "arizarhenzon@gmail.com",
+    "password": "$2b$10$.FckllEdufCZkmoJA3ULfOhrIximOiydUOxpl/5Hlrntbc.u5M3k6",
+    "first_name": "Ariz",
+    "last_name": "Arhenzon",
+    "phone": "+63 912 345 6789",
+    "date_of_birth": null,
+    "role": "admin",
+    "created_at": "2025-12-03T04:55:54.501Z",
+    "updated_at": "2025-12-03T07:17:24.838Z"
+  },
+  {
+    "id": 7,
+    "email": "razor_rhenzon@yahoo.com",
+    "password": "$2b$10$f5h1xD3KWe7wYxjUMMyckuWtMXZQe6fap00dNLGWfNb8oqjhEO4k2",
+    "first_name": "Ariza",
+    "last_name": "Rhenzon",
+    "phone": "96664887121",
+    "date_of_birth": "2028-11-23T16:00:00.000Z",
+    "role": "user",
+    "created_at": "2025-12-03T06:59:01.940Z",
+    "updated_at": "2025-12-04T14:02:01.569Z"
+  }
+]

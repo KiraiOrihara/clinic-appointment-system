@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FORCE DESIGN SYSTEM */
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui;
+  background-color: #f9fafb;
+}
+
+/* TEST CLASS - IF THIS WORKS, STYLES ARE LOADING */
+.force-red-bg {
+  background-color: red !important;
+}
+
+/* Health Journey Planner Design System */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 186 100% 94%;
+    --accent-foreground: 215 25% 27%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* Healthcare-specific utility classes */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.bg-gradient-subtle {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.bg-grid-white {
+  background-image: radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-white\/\[0\.05\] {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Healthcare component styles */
+.healthcare-card {
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.healthcare-card:hover {
+  box-shadow: 0 10px 15px -3px hsl(217 91% 60% / 0.1);
+}
+
+.healthcare-feature-card {
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.healthcare-feature-card:hover {
+  box-shadow: 0 10px 15px -3px hsl(217 91% 60% / 0.1);
+}
+
+.healthcare-stat-card {
+  text-align: center;
+}
+
+.healthcare-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.healthcare-search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 640px) {
+  .healthcare-search-bar {
+    flex-direction: row;
+  }
+}
+
+.healthcare-clinic-card {
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.healthcare-clinic-card:hover {
+  box-shadow: 0 10px 15px -3px hsl(217 91% 60% / 0.1);
+}
+
+/* Animation utilities */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Healthcare-specific transitions */
+.healthcare-transition {
+  transition: var(--transition-smooth);
+}
+
+/* Fix for Mapbox grey bar issue */
+#map, .mapboxgl-map, .mapboxgl-canvas-container, .mapboxgl-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.mapboxgl-map::after, .mapboxgl-map::before {
+  display: none !important;
+}
+
+.mapboxgl-map * {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mapboxgl-map .mapboxgl-canvas {
+  background: transparent !important;
+}
+
+.mapboxgl-map .mapboxgl-canvas-container {
+  background: transparent !important;
+}
+
+.dark {
+  --background: 215 25% 12%;
+  --foreground: 210 40% 98%;
+
+  --card: 215 25% 16%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 215 25% 16%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 160 84% 39%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 215 25% 20%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 215 25% 20%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 215 25% 24%;
+  --input: 215 25% 24%;
+  --ring: 217 91% 60%;
+
+  --success: 160 84% 39%;
+  --success-foreground: 0 0% 100%;
+
+  --info: 199 89% 48%;
+  --info-foreground: 0 0% 100%;
+
+  --warning: 38 92% 50%;
+  --warning-foreground: 0 0% 100%;
+}
